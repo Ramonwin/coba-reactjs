@@ -1,7 +1,13 @@
-function Button(){
+import { useState } from "react";
 
+function Button(){
+    const [counter,setCounter] = useState(0);
+
+    let newCounter = 0;
     function clickHandler(){
-        console.log('saya di klik');
+        newCounter = counter + 1;
+        console.log(`saya di klik ${newCounter} kali`);
+        setCounter(newCounter)
     }
 
     function clickHandlerParam(nama){
@@ -12,7 +18,7 @@ function Button(){
 
     return(
         <>
-        <button onClick={clickHandler}>Klik Saya 🧮 </button>
+        <button onClick={clickHandler}>Klik Saya 🧮 {counter} kali </button>
         <button onClick={()=>clickHandlerParam('Ramon')}>Klik Saya 2 🧮 </button>
         </>
     )
