@@ -1,0 +1,9 @@
+/* cara manggil class ini dengan menggungakan <div className="menu-item"></div> */
+.menu-item {
+    background-color: aqua;
+    padding: 10px;
+    color : green;
+    border-radius: 15px;
+    width: 400px;
+}
+
