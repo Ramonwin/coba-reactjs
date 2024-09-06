@@ -4,6 +4,7 @@ import ButtonUseEffect from "./ButtonUseEffect"
 import Header from "./Header"
 import MenuResto from "./MenuResto"
 import Mood from "./Mood"
+import ChildComponent from "./ChildComponent"
 
 function App(){
   const [likeCounter, setLikeCounter] = useState(0)
@@ -21,7 +22,7 @@ function App(){
     <div> 
       <Header/>
       <MenuResto/>
-      <Mood hari = "Senin" mood = "😠 " />
+      <Mood hari = "Senin" mood = "😒" />
       <Mood hari = "Jumat" mood = "🙂" />
 
       <Button/>
@@ -33,6 +34,8 @@ function App(){
       <p>
         <button onClick={()=> setLikeSubscriberCounter(likeSubscriberCounter +1)}> {likeSubscriberCounter} Subscriber 🎥 </button>
       </p>
+
+      <ChildComponent/>
     </div>
   )
 }
